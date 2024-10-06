@@ -87,7 +87,6 @@ python-decouple==3.8
 python-dotenv==0.19.2
 pytz==2024.2
 PyWavelets==1.6.0
-pywin32==307
 PyYAML==6.0.2
 referencing==0.35.1
 requests==2.32.3
