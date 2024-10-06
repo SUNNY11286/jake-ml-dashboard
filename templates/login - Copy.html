@@ -1,0 +1,150 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>ML Dashboard</h1>
+    <div id="file-upload">
+        <h2>Upload CSV File</h2>
+        <input type="file" id="csv-file" accept=".csv">
+        <button onclick="uploadFile()">Upload</button>
+    </div>
+    <div id="target-selection" style="display: none;">
+        <h2>Select Target Variable</h2>
+        <select id="target-variable"></select>
+    </div>
+    <div id="model-selection" style="display: none;">
+        <h2>Select Model Type</h2>
+        <select id="model-type">
+            <option value="regression">Regression</option>
+            <option value="classification">Classification</option>
+        </select>
+        <button onclick="processData()">Process Data</button>
+    </div>
+    <div id="results" style="display: none;">
+        <h2>Results</h2>
+        <p>RMSE: <span id="rmse"></span></p>
+        <p>R2 Score: <span id="r2"></span></p>
+        <p>Accuracy: <span id="accuracy"></span></p>
+        <img id="plot" src="" alt="Results Plot">
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .login-container h1 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+        .login-container form {
+            width: 100%;
+        }
+        .form-control {
+            margin-bottom: 1.25rem;
+            padding: 0.75rem;
+            font-size: 1rem;
+            border-radius: 0.5rem;
+        }
+        .login-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 0.75rem;
+            font-size: 1rem;
+            width: 100%;
+            border: none;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+        .login-btn:hover {
+            background-color: #218838;
+        }
+        .error {
+            color: red;
+            text-align: center;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container col-md-4 col-sm-8">
+        <h1>Login</h1>
+        <form id="loginForm" action="{{ url_for('login_post') }}" method="POST" onsubmit="return validateForm()">
+            <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <!-- Error Message -->
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="error">{{ messages[0] }}</div>
+          {% endif %}
+        {% endwith %}
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript for Validation -->
+    <script>
+        function validateForm() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (!email || !password) {
+                alert('Please fill in all fields.');
+                return false;
+            }
+            // You can add more validation logic if required (e.g., regex for email)
+            return true;
+        }
+    </script>
+</body>
+</html>
