@@ -1,6 +1,7 @@
 streamlit-pandas-profiling
 streamlit>=1.4.0
 inflect
+flask
 click<=8.0.4
 seaborn>=0.11.1
 matplotlib>=3.3.3
