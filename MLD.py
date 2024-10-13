@@ -348,7 +348,16 @@ def run_dashboard():
     # You can add more functions and components from MLD.py as needed
 
 def main():
-    st.set_page_config(page_title="ML-dashboard", page_icon="🧊", layout="wide")
+        
+    image = Image.open('MLDicon.jpg')
+    
+    st.set_page_config(page_title="ML-dashboard", layout="wide", page_icon=image, initial_sidebar_state="expanded",
+                       menu_items={
+                           'Get Help': 'https://github.com/SUNNY11286/project_MLD_help',
+                           'Report a bug': "https://github.com/SUNNY11286/project_MLD_help",
+                           'About': "# This is part of project ML-D. \n This is an *testing version* web page!"
+                       })
+    # st.set_page_config(page_title="ML-dashboard", page_icon="🧊", layout="wide")
     st.title("ML Dashboard with Authentication")
 
     if "user" not in st.session_state:
