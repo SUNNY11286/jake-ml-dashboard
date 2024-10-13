@@ -41,14 +41,14 @@ import scipy.stats as stats
 import cicd
 #import pipe_try
 
-image = Image.open('MLDicon.jpg')
+# image = Image.open('MLDicon.jpg')
 
-st.set_page_config(page_title="ML-dashboard", page_icon=image, initial_sidebar_state="expanded",
-                   menu_items={
-                       'Get Help': 'https://github.com/SUNNY11286/project_MLD_help',
-                       'Report a bug': "https://github.com/SUNNY11286/project_MLD_help",
-                       'About': "# This is part of project ML-D. \n This is an *testing version* web page!"
-                   })
+# st.set_page_config(page_title="ML-dashboard", page_icon=image, initial_sidebar_state="expanded",
+#                    menu_items={
+#                        'Get Help': 'https://github.com/SUNNY11286/project_MLD_help',
+#                        'Report a bug': "https://github.com/SUNNY11286/project_MLD_help",
+#                        'About': "# This is part of project ML-D. \n This is an *testing version* web page!"
+#                    })
 #st.image(image, caption='Sunrise by the mountains')
 #count = st_autorefresh(interval=7200000, limit=100, key="fizzbuzzcounter")
 #countl = st_autorefresh(interval=7200000, limit=30, key="counter")
